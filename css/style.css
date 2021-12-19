@@ -1,0 +1,684 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+}
+/* Start Deep Drop Menu */
+.visibility {
+  display: none;
+}
+.visibility:hover {
+  display: block;
+}
+.border-animate li {
+  margin-left: 20px;
+}
+/* .font {
+  font-size: 1.5vw;
+  font-weight: 600;
+} */
+.border-animate li a {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(white, white);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+}
+.border-animate li a:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  right: 177px;
+  top: 0;
+}
+
+@media (max-width: 500px) {
+  .dropdown-menu .dropdown-submenu {
+    left: 0;
+    top: 25px;
+  }
+}
+
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+/* End Deep Drop Menu */
+
+/* Start Landing */
+section .back-image {
+  background: url(../images/hero-bg.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+}
+
+.landing-header-style {
+  font-size: 5vw;
+}
+
+.changeable {
+  font-size: 2.5vw;
+  position: relative;
+  text-align: center;
+}
+.changeable::before {
+  content: " |";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  animation: type 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes type {
+  0% {
+    content: " |";
+  }
+  1% {
+    content: "D |";
+  }
+  2% {
+    content: "De |";
+  }
+  3% {
+    content: "Des |";
+  }
+  4% {
+    content: "Desi |";
+  }
+  5% {
+    content: "Desin |";
+  }
+  6% {
+    content: "Desine |";
+  }
+  7% {
+    content: "Desiner |";
+  }
+  8% {
+    content: "Desiner ";
+  }
+  9% {
+    content: "Desiner |";
+  }
+  10% {
+    content: "Desiner ";
+  }
+  11% {
+    content: "Desiner |";
+  }
+  12% {
+    content: "Desiner|";
+  }
+  13% {
+    content: "Desine| ";
+  }
+  14% {
+    content: "Desin| ";
+  }
+  15% {
+    content: "Desi| ";
+  }
+  16% {
+    content: "Des|";
+  }
+  17% {
+    content: "De|";
+  }
+  18% {
+    content: "D|";
+  }
+  19% {
+    content: "|";
+  }
+  20% {
+    content: "";
+  }
+  21% {
+    content: "D|";
+  }
+  22% {
+    content: "De|";
+  }
+  23% {
+    content: "Dev|";
+  }
+  24% {
+    content: "Deve|";
+  }
+  25% {
+    content: "Devel|";
+  }
+  26% {
+    content: "Develo|";
+  }
+  27% {
+    content: "Develop|";
+  }
+  28% {
+    content: "Develope|";
+  }
+  29% {
+    content: "Developer|";
+  }
+  30% {
+    content: "Developer |";
+  }
+  31% {
+    content: "Developer ";
+  }
+  32% {
+    content: "Developer |";
+  }
+  33% {
+    content: "Developer ";
+  }
+  34% {
+    content: "Developer|";
+  }
+  35% {
+    content: "Develope|";
+  }
+  36% {
+    content: "Develop|";
+  }
+  37% {
+    content: "Develo|";
+  }
+  38% {
+    content: "Devel|";
+  }
+  39% {
+    content: "Deve|";
+  }
+  40% {
+    content: "Dev|";
+  }
+  41% {
+    content: "De|";
+  }
+  42% {
+    content: "D|";
+  }
+  43% {
+    content: "|";
+  }
+  44% {
+    content: "";
+  }
+  45% {
+    content: "|";
+  }
+  46% {
+    content: "F|";
+  }
+  47% {
+    content: "Fr|";
+  }
+  48% {
+    content: "Fre|";
+  }
+  49% {
+    content: "Free|";
+  }
+  50% {
+    content: "Freel|";
+  }
+  51% {
+    content: "Freela|";
+  }
+  52% {
+    content: "Freelan|";
+  }
+  53% {
+    content: "Freelanc|";
+  }
+  54% {
+    content: "Freelance|";
+  }
+  55% {
+    content: "Freelancer|";
+  }
+  56% {
+    content: "Freelancer";
+  }
+  57% {
+    content: "Freelancer|";
+  }
+  58% {
+    content: "Freelance|";
+  }
+  59% {
+    content: "Freelanc|";
+  }
+  60% {
+    content: "Freelan|";
+  }
+  61% {
+    content: "Freela|";
+  }
+  62% {
+    content: "Freel|";
+  }
+  63% {
+    content: "Free|";
+  }
+  64% {
+    content: "Fre|";
+  }
+  65% {
+    content: "Fr|";
+  }
+  66% {
+    content: "F|";
+  }
+  67% {
+    content: "|";
+  }
+  68% {
+    content: "";
+  }
+  69% {
+    content: "|";
+  }
+  70% {
+    content: "";
+  }
+  61% {
+    content: "P|";
+  }
+  62% {
+    content: "Ph|";
+  }
+  63% {
+    content: "Pho|";
+  }
+  64% {
+    content: "Phot|";
+  }
+  65% {
+    content: "Photo|";
+  }
+  66% {
+    content: "Photog|";
+  }
+  67% {
+    content: "Photogr|";
+  }
+  68% {
+    content: "Photogra|";
+  }
+  69% {
+    content: "Photograp|";
+  }
+  70% {
+    content: "Photograph|";
+  }
+  71% {
+    content: "Photographe|";
+  }
+  72% {
+    content: "Photographer|";
+  }
+  73% {
+    content: "Photographer";
+  }
+  74% {
+    content: "Photographe|";
+  }
+  75% {
+    content: "Photograph|";
+  }
+  76% {
+    content: "Photograp|";
+  }
+  77% {
+    content: "Photogra|";
+  }
+  78% {
+    content: "Photogr|";
+  }
+  79% {
+    content: "Photog|";
+  }
+  80% {
+    content: "Photo|";
+  }
+  81% {
+    content: "Phot|";
+  }
+  82% {
+    content: "Pho|";
+  }
+  83% {
+    content: "Ph|";
+  }
+  84% {
+    content: "P|";
+  }
+  85% {
+    content: "|";
+  }
+  90% {
+    content: "";
+  }
+  95% {
+    content: "|";
+  }
+  98% {
+    content: "";
+  }
+  100% {
+    content: "|";
+  }
+}
+/* End Landing */
+
+/* Start About */
+.parent-html-percentage,
+.parent-cdd-percentage,
+.parent-php-percentage,
+.parent-js-percentage {
+  width: 100%;
+  height: 10px;
+  background-color: #cde1f8;
+}
+.child-html-percentage,
+.child-cdd-percentage,
+.child-php-percentage,
+.child-js-percentage {
+  height: 10px;
+}
+.child-html-percentage {
+  width: 85%;
+}
+.child-cdd-percentage {
+  width: 75%;
+}
+.child-php-percentage {
+  width: 50%;
+}
+.child-js-percentage {
+  width: 90%;
+}
+/* End About */
+
+/* Start Services */
+.line-mf {
+  width: 40px;
+  height: 5px;
+  background-color: #0078ff;
+  margin: 0 auto;
+}
+
+.width-for-inside {
+  border-radius: 20px;
+}
+.parent-container:hover i {
+  color: white;
+  box-shadow: 0 0 0 10px #cde1f8;
+  background-color: #0078ff;
+
+  transition: all 500ms ease;
+}
+.child-container {
+  border-radius: 15px;
+}
+
+.filter {
+  background-color: #0078ff;
+  opacity: 0.4;
+}
+.image-bg {
+  background-image: url(../images/post-3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.font-size {
+  color: white;
+  z-index: 1;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 500px) {
+  .font-size {
+    font-size: 1.5rem;
+  }
+}
+
+.counter1,
+.counter2,
+.counter3,
+.counter4 {
+  position: relative;
+  color: white;
+}
+.counter1::before {
+  content: "450";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  transition: all 3s ease-in-out;
+  animation: counter1 3s 0s linear alternate;
+}
+@keyframes counter1 {
+  0% {
+    content: "0";
+  }
+  20% {
+    content: "90";
+  }
+  40% {
+    content: "180";
+  }
+  60% {
+    content: "270";
+  }
+  80% {
+    content: "350";
+  }
+  100% {
+    content: "450";
+  }
+}
+.counter2::before {
+  content: "25";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  transition: all 3s ease-in-out;
+  animation: counter2 3s 0s linear alternate;
+  animation-fill-mode: both;
+}
+@keyframes counter2 {
+  0% {
+    content: "0";
+  }
+  20% {
+    content: "5";
+  }
+  40% {
+    content: "10";
+  }
+  60% {
+    content: "15";
+  }
+  80% {
+    content: "20";
+  }
+  100% {
+    content: "25";
+  }
+}
+.counter3::before {
+  content: "550";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  transition: all 3s ease-in-out;
+  animation: counter3 3s 0s linear alternate;
+  animation-fill-mode: both;
+}
+@keyframes counter3 {
+  0% {
+    content: "0";
+  }
+  20% {
+    content: "110";
+  }
+  40% {
+    content: "220";
+  }
+  60% {
+    content: "330";
+  }
+  80% {
+    content: "440";
+  }
+  100% {
+    content: "550";
+  }
+}
+.counter4::before {
+  content: "48";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  transition: all 3s ease-in-out;
+  animation: counter4 3s 0s linear alternate;
+  animation-fill-mode: both;
+}
+@keyframes counter4 {
+  0% {
+    content: "0";
+  }
+  20% {
+    content: "10";
+  }
+  40% {
+    content: "20";
+  }
+  60% {
+    content: "30";
+  }
+  80% {
+    content: "40";
+  }
+  100% {
+    content: "48";
+  }
+}
+/* End Services */
+
+/* Start Work */
+.size {
+  font-size: 0.8rem;
+}
+
+.img-dad {
+  overflow: hidden;
+}
+.scaled:hover {
+  transform: scale(1.5);
+  transition: 2s ease;
+}
+
+.image-bg-2 {
+  background-image: url(../images/overlay-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.upper {
+  z-index: 99;
+}
+/* End Work */
+
+/* Start Blog */
+.position {
+  transform: translate(-50%);
+  bottom: -3.2vh;
+}
+.img-w {
+  width: 15% !important;
+}
+
+#reviews {
+  background-image: url(../images/overlay-bg.jpg);
+
+  background-attachment: fixed;
+}
+.image-container {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  background-color: black;
+  width: 1rem;
+  height: 1rem;
+  transition: 1s ease;
+}
+.carousel-item {
+  transition: 0.5s ease-in;
+}
+/* End Blog */
+
+/* -------------------------------------------------------------------------- */
+/*                                Start Contact                               */
+/* -------------------------------------------------------------------------- */
+#contact {
+  background-image: url(../images/overlay-bg.jpg);
+  backdrop-filter: blur(5px);
+  background-attachment: fixed;
+}
+.font-style {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+.social-item:hover {
+  background-color: #0078ff;
+  transition: 0.5s ease-in-out;
+}
+.social-item:hover i {
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+/* -------------------------------------------------------------------------- */
+/*                                End Contact                               */
+/* -------------------------------------------------------------------------- */
